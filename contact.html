@@ -6,6 +6,16 @@
     <title>Contact</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <style>
+      #map-canvas {
+        height: 250px;
+        width:250px;
+        margin: 0px;
+        padding: 0px
+      }
+    </style>
+
   </head>
   <body>
     <header>
@@ -20,14 +30,59 @@
     </header>
 
     <article>
-      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2689.570812508585!2d-122.31839209999997!3d47.61503449999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x54906acdb2813365%3A0xb356ee106a1b19f4!2s1535+11th+Ave%2C+Seattle%2C+WA+98122!5e0!3m2!1sen!2sus!4v1433886772403" width="600" height="450" style="border:0"><a href="https://www.google.com/maps/place/1535+11th+Ave,+Seattle,+WA+98122/@47.6150345,-122.3183921,17z/data=!3m1!4b1!4m2!3m1!1s0x54906acdb2813365:0xb356ee106a1b19f4">View embedded webpage</a></iframe>
+      <h1>Our offices are located here:</h1>
+      <section id="map-canvas"></section>
       <form>
-        <label for="name">Name: </label><input type="text" name="name" placeholder="Name" id="name">
-        <label for="email">Email: </label><input type="email" name="email" placeholder="Email" id="email">
-        <label for="subject">Subject: </label><input type="text" name="subject" maxlength="20" placeholder="Subject" id="subject">
-        <label for="message">Message: </label><input type="text" name="message" placeholder="Message" id="message">
+        <fieldset>
+          <legend>Your information</legend>
+          <ul>
+            <li><label for="name">Name: </label><input type="text" name="name" placeholder="First Last" id="name" required>
+            <li><label for="email">Email: </label><input type="email" name="email" placeholder="Email" id="email" required></li>
+            <li><label for="phone">Phone: </label><input type="tel" name="phone" placeholder="(555)555-5555" id="phone"></li>
+          </ul>
+        </fieldset>
+
+        <fieldset>
+          <legend>Card information</legend>
+          <fieldset>
+            <legend>Card type</legend>
+            <input id="visa" name="cardtype" type="radio" required>
+            <label for="visa">VISA</label>
+            <input id="amex" name="cardtype" type="radio" required>
+            <label for="amex">AmEx</label>
+            <input id="mastercard" name="cardtype" type="radio" required>
+            <label for="mastercard">Mastercard</label>
+          </fieldset>
+          <fieldset>
+          <legend>Card Info</legend>
+            <ul>
+              <li><label for="cardnumber">Card number</label>
+              <input id="cardnumber" name="cardnumber" type="number" required></li>
+              <li><label for="secure">Security code</label>
+              <input id="secure" name="secure" type="number" required></li>
+              <li><label for="namecard">Name on card</label>
+              <input id="namecard" name="namecard" type="text" placeholder="First Last" required></li>
+            </ul>
+          </fieldset>
+          <fieldset>
+            <legend>Billing Address</legend>
+            <ul>
+              <li><label for="street1">Street 1</label>
+              <input id="street1" name="street1" type="text" required></li>
+              <li><label for="street2">Street 2</label>
+              <input id="street2" name="street2" type="text"></li>
+              <li><label for="city">City</label>
+              <input id="city" name="city" type="text" required></li>
+              <li><label for="state">State</label>
+              <input id="state" name="state" type="text" required></li>
+              <li><label for="zip">Zip Code</label>
+              <input id="zip" name="zip" type="number" required></li>
+            </ul>
+          </fieldset>
+        </fieldset>
         <input type="submit" name="button" value="Submit">
       </form>
+
     </article>
 
     <aside>
@@ -39,5 +94,7 @@
       <p><a href="tel:+12065555555">206-555-5555</a></p>
       <a href="http://www.thestranger.com/privacy-policy" rel="copyright">Privacy Policy</a>
     </footer>
+    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp"></script>
+    <script type="text/javascript" src="location.js"></script>
   </body>
 </html>
