@@ -1,0 +1,42 @@
+header {
+  height: 120px;
+  background-color: gray;
+  margin-bottom: 15px;
+}
+.title {
+  float: left;
+}
+nav {
+  float: right;
+}
+article {
+  width: 70%;
+  float: left;
+  padding-left: 1%;
+}
+aside {
+  width: 28%;
+  float: right;
+  padding-right: 1%;
+}
+footer {
+  clear: both;
+  background-color: gray;
+  height: 100px;
+  text-align: center;
+  padding-top: 20px;
+}
+body {
+  min-width: 900px;
+}
+section {
+  margin-bottom: 10px;
+}
+.navLinks {
+  display: inline-block;
+  margin: 45px 10px 0 0;
+}
+
+.title {
+margin: 10px 0 0 10px;
+}
