@@ -6,83 +6,81 @@
     <title>Contact</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <style>
-      #map-canvas {
-        height: 250px;
-        width:250px;
-        margin: 0px;
-        padding: 0px
-      }
-    </style>
-
+    <link rel="stylesheet" type="text/css" href="reset.css">
+    <link rel="stylesheet" type="text/css" href="layout.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
   </head>
   <body>
     <header>
-      <h1><a href="index.html"><img src="http://www.thestranger.com/assets/images/theStranger_logo.png" alt="The Stranger" title="The Stranger"/></a></h1>
-      <h2>Seattle's Only Newspaper</h2>
+      <div class="title">
+        <h1><a href="index.html"><img src="http://www.thestranger.com/assets/images/theStranger_logo.png" alt="The Stranger" title="The Stranger"/></a></h1>
+        <h2>Seattle's Only Newspaper</h2>
+      </div>
       <nav>
         <ul>
-          <li><a href="blog.html">Blog</a></li>
-          <li><a href="contact.html">Contact</a></li>
+          <li class="navLinks"><a href="blog.html">Blog</a></li>
+          <li class="navLinks"><a href="contact.html">Contact</a></li>
         </ul>
       </nav>
     </header>
 
     <article>
-      <h1>Our offices are located here:</h1>
-      <section id="map-canvas"></section>
-      <form>
-        <fieldset>
-          <legend>Your information</legend>
-          <ul>
-            <li><label for="name">Name: </label><input type="text" name="name" placeholder="First Last" id="name" required>
-            <li><label for="email">Email: </label><input type="email" name="email" placeholder="Email" id="email" required></li>
-            <li><label for="phone">Phone: </label><input type="tel" name="phone" placeholder="(555)555-5555" id="phone"></li>
-          </ul>
-        </fieldset>
-
-        <fieldset>
-          <legend>Card information</legend>
-          <fieldset>
-            <legend>Card type</legend>
-            <input id="visa" name="cardtype" type="radio" required>
-            <label for="visa">VISA</label>
-            <input id="amex" name="cardtype" type="radio" required>
-            <label for="amex">AmEx</label>
-            <input id="mastercard" name="cardtype" type="radio" required>
-            <label for="mastercard">Mastercard</label>
-          </fieldset>
-          <fieldset>
-          <legend>Card Info</legend>
+      <section>
+        <h1 class="posts">Our offices are located at:</h1>
+        <p>1535 11th Ave (Third Floor), Seattle, WA 98122</p>
+        <section id="map"></section>
+      </section>
+      <section>
+        <h1 class="posts">Sign up here to read our shit!</h1>
+        <form>
+          <fieldset class="main">
+            <legend>Your information</legend>
             <ul>
-              <li><label for="cardnumber">Card number</label>
-              <input id="cardnumber" name="cardnumber" type="number" required></li>
-              <li><label for="secure">Security code</label>
-              <input id="secure" name="secure" type="number" required></li>
-              <li><label for="namecard">Name on card</label>
-              <input id="namecard" name="namecard" type="text" placeholder="First Last" required></li>
+              <li><label for="name">Name: </label><input type="text" name="name" placeholder="First Last" id="name" required>
+              <li><label for="email">Email: </label><input type="email" name="email" placeholder="Email" id="email" required></li>
+              <li><label for="phone">Phone: </label><input type="tel" name="phone" placeholder="(555)555-5555" id="phone"></li>
             </ul>
           </fieldset>
-          <fieldset>
-            <legend>Billing Address</legend>
-            <ul>
-              <li><label for="street1">Street 1</label>
-              <input id="street1" name="street1" type="text" required></li>
-              <li><label for="street2">Street 2</label>
-              <input id="street2" name="street2" type="text"></li>
-              <li><label for="city">City</label>
-              <input id="city" name="city" type="text" required></li>
-              <li><label for="state">State</label>
-              <input id="state" name="state" type="text" required></li>
-              <li><label for="zip">Zip Code</label>
-              <input id="zip" name="zip" type="number" required></li>
-            </ul>
-          </fieldset>
-        </fieldset>
-        <input type="submit" name="button" value="Submit">
-      </form>
 
+          <fieldset class="main">
+            <legend>Card information</legend>
+            <fieldset>
+              <input id="visa" name="cardtype" type="radio" required>
+              <label for="visa">VISA</label>
+              <input id="amex" name="cardtype" type="radio" required>
+              <label for="amex">AmEx</label>
+              <input id="mastercard" name="cardtype" type="radio" required>
+              <label for="mastercard">Mastercard</label>
+            </fieldset>
+            <fieldset>
+              <ul>
+                <li><label for="cardnumber">Card number: </label>
+                <input id="cardnumber" name="cardnumber" type="number" required></li>
+                <li><label for="secure">Security code: </label>
+                <input id="secure" name="secure" type="number" required></li>
+                <li><label for="namecard">Name on card: </label>
+                <input id="namecard" name="namecard" type="text" required></li>
+              </ul>
+            </fieldset>
+            <fieldset>
+              <legend class="billing">Billing Address: </legend>
+              <ul>
+                <li><label for="street1">Street 1: </label>
+                <input id="street1" name="street1" type="text" required></li>
+                <li><label for="street2">Street 2: </label>
+                <input id="street2" name="street2" type="text"></li>
+                <li><label for="city">City: </label>
+                <input id="city" name="city" type="text" required></li>
+                <li><label for="state">State: </label>
+                <input id="state" name="state" type="text" required></li>
+                <li><label for="zip">Zip Code: </label>
+                <input id="zip" name="zip" type="number" required></li>
+              </ul>
+            </fieldset>
+          </fieldset>
+          <input type="submit" name="button" value="Submit">
+        </form>
+      </section>
     </article>
 
     <aside>
