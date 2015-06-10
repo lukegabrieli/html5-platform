@@ -5,6 +5,7 @@ header {
 }
 .title {
   float: left;
+  margin: 10px 0 0 10px;
 }
 nav {
   float: right;
@@ -35,8 +36,4 @@ section {
 .navLinks {
   display: inline-block;
   margin: 45px 10px 0 0;
-}
-
-.title {
-margin: 10px 0 0 10px;
 }
