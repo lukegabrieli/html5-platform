@@ -1,0 +1,17 @@
+CACHE MANIFEST
+# 2015-06-12:v2
+
+CACHE:
+index.html
+blog.html
+contact.html
+layout.css
+reset.css
+style.css
+location.js
+
+NETWORK:
+*
+
+FALLBACK:
+offline.html

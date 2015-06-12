@@ -1,5 +1,5 @@
 <!doctype html>
-<html class="no-js" lang="">
+<html class="no-js" lang="eng" manifest="manifest.appcache">
   <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
@@ -13,7 +13,7 @@
   <body>
     <header>
       <div class="title">
-        <h1><a href="index.html"><img src="http://www.thestranger.com/assets/images/theStranger_logo.png" alt="The Stranger" title="The Stranger"/></a></h1>
+        <h1><a href="index.html"><img src="http://www.thestranger.com/assets/images/theStranger_logo.png" alt="The Stranger" title="The Stranger" class="logo"/></a></h1>
         <h2>Seattle's Only Newspaper</h2>
       </div>
       <nav>
@@ -31,13 +31,13 @@
       </section>
       <section>
         <h1 class="posts">Sign up here to read our shit!</h1>
-        <form>
+        <form id="localStorageTest">
           <fieldset class="main">
             <legend>Your information</legend>
             <ul>
-              <li><label for="name">Name: </label><input type="text" name="name" placeholder="First Last" id="name" required>
-              <li><label for="email">Email: </label><input type="email" name="email" placeholder="Email" id="email" required></li>
-              <li><label for="phone">Phone: </label><input type="tel" name="phone" placeholder="(555)555-5555" id="phone"></li>
+              <li><label for="name">Name: </label><input type="text" name="name" placeholder="First Last" id="name" class="stored" required>
+              <li><label for="email">Email: </label><input type="email" name="email" placeholder="Email" id="email" class="stored" required></li>
+              <li><label for="phone">Phone: </label><input type="tel" name="phone" placeholder="(555)555-5555" id="phone" class="stored"></li>
             </ul>
           </fieldset>
           <fieldset class="main">
@@ -64,15 +64,15 @@
               <legend class="billing">Billing Address: </legend>
               <ul>
                 <li><label for="street1">Street 1: </label>
-                <input id="street1" name="street1" type="text" required></li>
+                <input id="street1" name="street1" type="text" class="stored" required></li>
                 <li><label for="street2">Street 2: </label>
-                <input id="street2" name="street2" type="text"></li>
+                <input id="street2" name="street2" type="text" class="stored"></li>
                 <li><label for="city">City: </label>
-                <input id="city" name="city" type="text" required></li>
+                <input id="city" name="city" type="text" class="stored" required></li>
                 <li><label for="state">State: </label>
-                <input id="state" name="state" type="text" required></li>
+                <input id="state" name="state" type="text" class="stored" required></li>
                 <li><label for="zip">Zip Code: </label>
-                <input id="zip" name="zip" type="number" required></li>
+                <input id="zip" name="zip" type="number" class="stored" required></li>
               </ul>
             </fieldset>
           </fieldset>
@@ -85,11 +85,13 @@
     </aside>
     <footer>
       <p>All contents &copy; Index Newspapers LLC 1535 11th Ave (Third Floor), Seattle, WA 98122</p>
-      <a href="mailto:anonymous@thestranger.com">anonymous@thestranger.com</a>
+      <p><a href="mailto:anonymous@thestranger.com">anonymous@thestranger.com</a></p>
       <p><a href="tel:+12065555555">206-555-5555</a></p>
-      <a href="http://www.thestranger.com/privacy-policy" rel="copyright">Privacy Policy</a>
+      <p><a href="http://www.thestranger.com/privacy-policy" rel="copyright">Privacy Policy</a></p>
     </footer>
     <script src="https://maps.googleapis.com/maps/api/js?v=3.exp"></script>
     <script type="text/javascript" src="location.js"></script>
+    <script type="text/javascript" src="storage.js"></script>
+
   </body>
 </html>
