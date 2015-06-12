@@ -1,6 +1,5 @@
 header {
   height: 120px;
-  background-color: gray;
   margin-bottom: 15px;
 }
 .title {
@@ -14,15 +13,16 @@ article {
   width: 70%;
   float: left;
   padding-left: 1%;
+  max-width: 600px;
 }
 aside {
   width: 28%;
   float: right;
   padding-right: 1%;
+  max-width: 300px;
 }
 footer {
   clear: both;
-  background-color: gray;
   height: 100px;
   text-align: center;
   padding-top: 20px;
@@ -31,9 +31,18 @@ body {
   min-width: 900px;
 }
 section {
-  margin-bottom: 10px;
+  margin: 30px 0 30px 25px;
 }
 .navLinks {
   display: inline-block;
   margin: 45px 10px 0 0;
+}
+img:not(.logo) {
+  margin: 10px 0 15px 0;
+}
+section > p {
+  margin-top: 5px;
+}
+.billing {
+  margin: 5px 0 10px 0;
 }
